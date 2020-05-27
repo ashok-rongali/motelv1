@@ -1,0 +1,27 @@
+<p></p>
+<br><br>
+<h5>Update Target</h5>
+<input name="date"  style="float: right;" [(ngModel)]="today" type="date" required (change)="getBugetList()">
+<table class="table table-lg table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Motel Name</th>
+        <th scope="col">Room Target</th>
+        <th scope="col">Budget Target</th>
+      </tr>
+    </thead>
+    <tbody  *ngFor = "let item of budgetList ;let i=index" >
+      <tr>
+        <th scope="row">{{item.MOTELNAME}}
+        </th>
+        <th scope="row">
+          <input [(ngModel)]="budgetList[i].ROOMTARGET" class="form-control" type="text" /> 
+        </th>
+        <th scope="row">
+          <input [(ngModel)]="budgetList[i].BUDGETTARGET" class="form-control" type="text" /> 
+        </th> 
+     
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="saveDropPoints()">Process Target</button>

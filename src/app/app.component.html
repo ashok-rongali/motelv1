@@ -1,11 +1,50 @@
 
-<h5>Welcome to {{ title }}!</h5>
-<h6>loading app.component.html</h6>
-<!--The content below is only a placeholder and can be replaced.-->
-<header class='text-center text-primary'><h4>DATALAKE  SOLUTIONS</h4></header>
-  <!-- <base href="../rfidadmin/"> -->
-<div class="tab" id ="mainTabDiv" >
-  <button class="tablinks" routerLink="/usersL" routerLinkActive="active" >USERS</button>
-  <button class="tablinks" routerLink="/uploadsL"  routerLinkActive="active">Uploads</button>
-</div>
-<router-outlet></router-outlet>
+
+<nav  *ngIf="router.url != '/login'&&router.url != '/'" style="background-color: #363783;" class="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <a class="navbar-brand" href="index.html">
+    <img style="width: 50px;" src="http://www.dlscloudservices.com/admin/schoolbuddy/logo.png">
+    </a>
+     <app-dashboard  ></app-dashboard>
+  
+     <div class="col-md-11" style="color: white;" >
+     <!-- <span>{{userName}}</span>-->
+    </div>
+  
+    <div class="col-md-1" style="display:inline-flex">
+  
+      <a routerLink="login" (click)="signOut()" class=" waves-effect waves-light">
+        <i style="color: white;"   class="fa fa-power-off"></i>
+     </a>
+    </div>
+  <!--
+    <div >
+         
+        <div class=" float-right">
+         <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">14 <i class="fa fa-envelope"></i></a>
+            </li>
+        <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">8 <i class="fa fa-eye"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">1 <i class="fa fa-bullhorn"></i></a>
+            </li>
+            <li class="nav-item float-right">
+              <a routerLink="login" (click)="signOut()" class="nav-link waves-effect waves-light">
+                 &nbsp;&nbsp;&nbsp; <i class="fa fa-power-off"></i>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>-->
+  </nav>
+  <router-outlet></router-outlet>
+  
+  <div style="text-align: center;">  
+    <a target="_blank" href="https://www.datalake-solutions.com">
+      <p style="position: sticky;">Powerd By Datalake-Solutions</p>
+  
+    </a>
+  </div>
+  

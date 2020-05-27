@@ -1,28 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-//import {NgxPaginationModule} from 'ngx-pagination; //npm install ngx-pagination --save
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { UploadsComponent } from './uploads/uploads.component';
+import { Routes, RouterModule } from '@angular/router';
+
+
+import { UploadpdfComponent } from './uploadpdf/uploadpdf.component';
+import { UpdatetargetComponent } from './updatetarget/updatetarget.component';
+import { DownloadexcelComponent } from './downloadexcel/downloadexcel.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'usersL', component: UsersComponent },
-  {path:'uploadsL',component:UploadsComponent}
-]
+  {path:"",component:LoginComponent},
+  {path:"login",component:LoginComponent},
+    {path:"uploadpdf",component:UploadpdfComponent},
+    { path:"updatetarget",component:UpdatetargetComponent},
+    {path:"downloadexcel",component:DownloadexcelComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent,
-    UploadsComponent
+    UploadpdfComponent,
+    UpdatetargetComponent,
+    DownloadexcelComponent,
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(routes),HttpClientModule
+    BrowserModule,
+    BrowserAnimationsModule, // required animations module
+    //ToastrModule.forRoot(), // ToastrModule added
+    RouterModule.forRoot(routes),
+    FormsModule,
+    HttpClientModule
   ],
-  //exports: [ RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
