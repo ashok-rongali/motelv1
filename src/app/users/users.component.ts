@@ -16,6 +16,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.loadSchools();
+    //adding comment
   }
 
   loadSchools() {
