@@ -1,1 +1,24 @@
+<br><br><br><br>
+<div class = "container">
+<form class="form-inline">
 
+    <div class="form-group" style="margin-right: 2%;">
+        <label>Select Year</label>
+        <select  [(ngModel)]="generateJson.gYear"  name="generateJson.gYear">
+        <option *ngFor='let year of yearsDDData' [value]="year">{{year}}</option>
+        </select>
+    </div>
+
+   <div class="form-group" style="margin-right: 2%;">
+       <label>Select Month</label>
+        <select  [(ngModel)]="generateJson.gMonth"  name="generateJson.gMonth">
+        <option *ngFor='let monthJson of monthDDData' [value]="monthJson.mkey">{{monthJson.mval}}</option>
+        </select>
+    </div>
+    <div class="form-group" style="margin-right: 2%;"><button class="btn btn-primary btn-xs" (click) = 'generateLinkFun(generateJson)'>GenerateLink</button></div>
+    <div class="form-group" style="margin-right: 2%;"><button class="btn btn-primary btn-xs" (click) = 'uploadExcelFun(generateJson)'>Upload</button></div>
+    <div class="form-group" style="margin-right: 2%;"><button class="btn btn-primary btn-xs" (click) = 'sendEmailFun(generateJson)'>Send Email</button></div>
+</form>
+
+<div> <a href={{generatedLink}}>{{generatedFileName}}</a></div>
+</div>

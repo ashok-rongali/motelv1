@@ -7,27 +7,93 @@
 		<div class="col-md-12 listing-block">
 <table class="table table-lg table-bordered">
     <tbody>
+
         <tr>
             <td>ABVI</td>
-            <td>
-                <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
-            </td>
-           <!-- <p>  Upload Percent: {{percentDone}}%      </p>-->    
-            <td>    <ng-container *ngIf="uploadSuccess">
-                Upload Successful
-              </ng-container> </td>
+            <td><input type="file" (change)="fileChangeABV1($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+
+        <tr>
+            <td>QINorth</td>
+            <td><input type="file" (change)="fileChangeQINorth($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
         </tr>
 
         <tr>
-            <td>Hampton</td>
-            <td>
-                <input type="file" (change)="fileChangeHampton($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
-            </td>
-           <!-- <p>  Upload Percent: {{percentDone}}%      </p>-->    
-            <td>    <ng-container *ngIf="uploadSuccess">
-                Upload Successful
-              </ng-container> </td>
+            <td>Super8</td>
+            <td><input type="file" (change)="fileChangeSuper8($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
         </tr>
+
+        <tr>
+            <td>QIGreen</td>
+            <td><input type="file" (change)="fileChangeQIGreen($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>QISouth</td>
+            <td><input type="file" (change)="fileChangeQISouth($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>RedRoof</td>
+            <td><input type="file" (change)="fileChangeRedRoof($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>Obetz</td>
+            <td><input type="file" (change)="fileChangeObetz($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>HIE</td>
+            <td><input type="file" (change)="fileChangeHIE($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>Hamp</td>
+            <td><input type="file" (change)="fileChangeHamp($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>BestSou</td>
+            <td><input type="file" (change)="fileChangeBestSou($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>bestNort</td>
+            <td><input type="file" (change)="fileChangebestNort($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <tr>
+            <td>Sid</td>
+            <td><input type="file" (change)="fileChangeSid($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+        <!-- <tr>
+            <td>Tole</td>
+            <td><input type="file" (change)="fileChangeTole($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr> -->
+
+        <tr>
+            <td>Tole</td>
+            <td><input type="file" (change)="fileChangeTole($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"></td>   
+            <td> <ng-container *ngIf="uploadSuccess"> Upload Successful</ng-container> </td>
+        </tr>
+
+
     </tbody>
 </table>
 </div>
